@@ -11,12 +11,18 @@ const inputPasswordElement = document.querySelector('#inputPassword');
 
 const expectedEmail = 'admin@dicoding.com';
 const expectedPassword = 'superpassword';
+/* Comment: Menambahkan aksi klik pada button. */
 
 loginFormElement.addEventListener('submit', function(event) {
   event.preventDefault();
 
   const email = inputEmailElement.value;
+  /**
+  membuat variabel password untuk menyimpan nilai password yang didapatkan saat button ditekan.
+  @constant (string)
+  */
   const password = inputPasswordElement.value;
+  /* Comment: Jika sesuai maka program akan berpindah ke halaman home. */
   if (email == expectedEmail && password == expectedPassword) {
     goToHome();
   } else {
